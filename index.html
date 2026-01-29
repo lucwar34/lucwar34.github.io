@@ -8,8 +8,8 @@
     <style>
         body {
             font-family: Arial, Helvetica, sans-serif;
-            background-color: #0f172a; /* dark blue */
-            color: #e5e7eb; /* light gray */
+            background-color: #0f172a;
+            color: #e5e7eb;
             line-height: 1.6;
             margin: 0;
             padding: 0;
@@ -21,8 +21,8 @@
             padding: 40px 20px;
         }
 
-        h1, h2 {
-            color: #38bdf8; /* light blue accent */
+        h1, h2, h3 {
+            color: #38bdf8;
         }
 
         h1 {
@@ -41,8 +41,23 @@
         }
 
         .highlight {
-            color: #facc15; /* subtle yellow highlight */
+            color: #facc15;
             font-weight: bold;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin: 20px 0;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+        }
+
+        .profile-pic {
+            max-width: 180px;
+            border-radius: 50%;
+            display: block;
+            margin: 20px auto 30px auto;
         }
 
         footer {
@@ -56,147 +71,116 @@
 </head>
 
 <body>
-    <div class="container">
+<div class="container">
 
-        <h1>About Me</h1>
+    <h1>About Me</h1>
 
-        <p>
-            My name is Lucas Wardlow and I am a college student pursuing a career in <span class="highlight">IT and Cybersecurity</span>, with a strong
-            interest in how systems work beneath the surface. While much of my formal experience comes from coursework,
-            I’ve intentionally focused on gaining hands-on exposure by building and experimenting with real systems on my own.
-        </p>
+    <!-- Profile Picture -->
+    <img src="images/me.png" alt="Photo of Lucas Wardlow" class="profile-pic">
 
-        <p>
-            I began creating home lab projects because I didn’t want my understanding of technology to remain purely inside the classroom.
-            I wanted to know what actually happens when an operating system boots, how networking services interact, 
-            and how to fix what breaks when configurations are incorrect. Learning through direct experimentation, mistakes and all,
-            has been one of the most valuable parts of my development in understanding doftware and hardware systems.
-        </p>
+    <p>
+        My name is Lucas Wardlow and I am a college student pursuing a career in
+        <span class="highlight">IT and Cybersecurity</span>, with a strong interest in how systems work beneath the surface.
+        While much of my formal experience comes from coursework, I’ve intentionally focused on gaining hands-on exposure
+        by building and experimenting with real systems on my own.
+    </p>
 
-        <h2>How I Learn</h2>
+    <p>
+        I began creating home lab projects because I didn’t want my understanding of technology to remain purely inside
+        the classroom. I wanted to know what actually happens when an operating system boots, how networking services
+        interact, and how to fix what breaks when configurations are incorrect. Learning through direct experimentation,
+        mistakes and all, has been one of the most valuable parts of my development.
+    </p>
 
-        <p>
+    <h2>How I Learn</h2>
+
+    <p>
         My approach to learning is simple: build something, fix inevitable issues, and document what I learned.
         Through this process, I completed three hands-on projects that were both practically useful in my own environment
-        and directly applicable to real-world IT concepts. These included deploying TrueNAS as a personal cloud storage
-        solution, configuring a network-wide DNS filtering service using Pi-hole to block advertisements at the router level,
-        and experimenting with virtualization software to understand how virtual machines operate.
+        and directly applicable to real-world IT concepts.
+    </p>
+
+    <section>
+        <h2>Projects Overview</h2>
+
+        <h3>Virtualization & Linux Command Line</h3>
+
+        <img src="images/ubuntu-vm-terminal.png"
+             alt="Ubuntu virtual machine running in a command-line environment">
+
+        <p>
+            My exposure to virtualization began in a Computer Operating Systems course, where we were required to run a
+            virtual machine hosted on a remote computer lab provided by the university. The process involved accessing
+            the lab environment, installing Ubuntu, and configuring virtual machine specifications using VirtualBox.
         </p>
 
         <p>
-            Many of these projects started with little prior knowledge. I relied heavily on documentation,
-            trial and error, and iterative improvement. This process helped me develop not only technical skills,
-            but also persistence and confidence in navigating ambiguity — skills I believe are critical in IT and security roles.
-        </p>
-
-        <section>
-    <h2>Projects Overview:</h2>
-
-    <p>
-        My learning process is largely driven by hands-on experimentation. While coursework introduced many of the core
-        concepts, my understanding deepened when I was able to apply them through projects that were both practical and
-        personally useful. The following projects represent key points in that learning process.
-    </p>
-
-    <h3>Virtualization & Linux Command Line</h3>
-
-    <p>
-        My exposure to virtualization began in a Computer Operating Systems course, where we were required to run a
-        virtual machine hosted on a remote computer lab provided by the university. The process involved accessing the
-        lab environment, installing Ubuntu, and configuring virtual machine specifications using VirtualBox.
-    </p>
-
-    <p>
-        Once the virtual machine was configured, much of our interaction took place through the Linux command line.
-        Because the virtual machines were hosted remotely, I continue to access my VM by remotely connecting to a school
-        computer and launching it from there whenever I want to experiment or practice.
-    </p>
-
-    <p>
-        This experience became particularly useful in a later C Programming for Engineers course, where I was required
-        to use a Unix-based terminal environment to navigate directories, compile programs, and execute code. Having
-        already spent time working in Ubuntu and the Linux CLI made the transition to the macOS terminal (which is
-        Unix-based) far more intuitive.
-    </p>
-
-    <h3>TrueNAS & Personal Storage Server</h3>
-
-    <p>
-        To gain experience with storage and server administration, I repurposed an old laptop by installing TrueNAS as
-        a dedicated operating system. This required identifying compatible hardware, installing a new OS from scratch,
-        and configuring the system remotely from another computer using TrueNAS’s web interface.
-    </p>
-
-    <p>
-        With storage hardware becoming increasingly expensive in recent months, particularly due to shortages affecting
-        memory and related production, using an existing one-terabyte hard drive provided a practical and cost-effective
-        solution. The system now functions as a centralized storage server within my home network, all while serving to 
-        be a cunning solution to re-use old hardware.
-    </p>
-
-    <p>
-        The server is currently used to store personal photos, game ROM files and ISO backups, and a media library
-        accessible through Jellyfin. I have also hosted a Minecraft game server on the system, allowing friends and I to
-        connect and play within a self-hosted environment.
-    </p>
-
-    <p>
-        From a technical standpoint, maintaining consistent network access to the TrueNAS server required configuring a
-        static address at the router level to preserve DNS resolution. I plan to expand this setup by adding a second
-        hard drive to mirror the existing one for improved data redundancy, as well as exploring additional
-        virtualization capabilities as my budget allows.
-    </p>
-
-    <p>
-        Beyond the technical learning, this project demonstrated the real-world practicality of self-hosted services by
-        reducing reliance on subscription-based cloud storage solutions.
-    </p>
-
-    <h3>Pi-hole & Network-Wide DNS Filtering</h3>
-
-    <p>
-        To further explore networking and DNS concepts, I implemented Pi-hole as a network-wide DNS filtering solution.
-        This involved configuring the Pi-hole service, managing clients and settings, and updating router-level DNS
-        configurations to route traffic through the Pi-hole instance.
-    </p>
-
-    <p>
-        By handling DNS requests at the network level, Pi-hole blocks advertisements and tracking domains across all
-        connected devices without requiring per-device configuration. Managing this system provided insight into how
-        DNS operates within a network and how centralized services can improve both performance and security.
-    </p>
-
-    <h3>Reflection</h3>
-
-    <p>
-        Because these tools are actively used in my daily environment, homelabbing has been both a practical and
-        rewarding experience. It has taught me more about operating systems, networking, storage, and system management
-        than I initially expected, and it has resulted in tangible, useful systems that I continue to maintain and
-        expand.
-    </p>
-</section>
-
-
-        <h2>What I’m Working Toward</h2>
-
-        <p>
-            I am currently seeking an <span class="highlight">entry-level IT or cybersecurity internship</span> where I can continue
-            to build practical experience, learn from professionals in the field, and contribute meaningfully to a team.
-            I am especially interested in roles involving systems administration, networking, security operations,
-            or infrastructure support.
+            Once the virtual machine was configured, much of our interaction took place through the Linux command line.
+            Because the virtual machines were hosted remotely, I continue to access my VM by remotely connecting to a
+            school computer and launching it from there whenever I want to experiment or practice.
         </p>
 
         <p>
-            This website serves as a living record of my projects, learning process, and technical growth.
-            Everything documented here reflects real systems I have built, configured, or broken — and then fixed.
+            This experience later proved valuable in a C Programming for Engineers course, where I worked extensively
+            in a Unix-based terminal to navigate directories, compile code, and execute programs.
         </p>
 
-        <footer>
-            <p>
-                © 2026 • Built and maintained by me using GitHub Pages
-            </p>
-        </footer>
+        <h3>TrueNAS & Personal Storage Server</h3>
 
-    </div>
+        <img src="images/truenas-dashboard.png"
+             alt="TrueNAS web dashboard showing storage and system status">
+
+        <p>
+            To gain experience with storage and server administration, I repurposed an old laptop by installing TrueNAS
+            as a dedicated operating system. The system is configured and managed remotely through the TrueNAS web
+            interface.
+        </p>
+
+        <p>
+            The server is used for centralized storage of photos, game ROM and ISO backups, media streaming via Jellyfin,
+            and hosting a Minecraft server for friends. To maintain consistent access, I configured a static network
+            address at the router level.
+        </p>
+
+        <p>
+            I plan to expand this setup by adding a second hard drive for data mirroring and exploring additional
+            virtualization capabilities as resources allow.
+        </p>
+
+        <h3>Pi-hole & Network-Wide DNS Filtering</h3>
+
+        <img src="images/pihole-dashboard.png"
+             alt="Pi-hole dashboard showing blocked DNS queries">
+
+        <p>
+            To further explore networking concepts, I implemented Pi-hole as a network-wide DNS filtering solution.
+            This involved configuring DNS settings at the router level and managing clients through the Pi-hole interface.
+        </p>
+
+        <p>
+            By handling DNS requests centrally, Pi-hole blocks ads and tracking domains across all devices on the network
+            without requiring per-device configuration.
+        </p>
+
+        <h3>Reflection</h3>
+
+        <p>
+            Because these systems are actively used in my daily environment, homelabbing has been both practical and
+            fulfilling. It has resulted in tangible tools while significantly deepening my understanding of IT systems.
+        </p>
+    </section>
+
+    <h2>What I’m Working Toward</h2>
+
+    <p>
+        I am currently seeking an <span class="highlight">entry-level IT or cybersecurity internship</span> where I can
+        continue to build hands-on experience and learn from professionals in the field.
+    </p>
+
+    <footer>
+        <p>© 2026 • Built and maintained by me using GitHub Pages</p>
+    </footer>
+
+</div>
 </body>
 </html>
