@@ -28,6 +28,7 @@
         h1 {
             font-size: 2.5em;
             margin-bottom: 10px;
+            text-align: center;
         }
 
         h2 {
@@ -45,19 +46,29 @@
             font-weight: bold;
         }
 
-        img {
+        figure {
+            margin: 30px 0;
+        }
+
+        figure img {
             max-width: 100%;
             height: auto;
             border-radius: 10px;
-            margin: 20px 0;
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+        }
+
+        figcaption {
+            font-size: 0.9em;
+            color: #9ca3af;
+            margin-top: 8px;
         }
 
         .profile-pic {
             max-width: 180px;
-            border-radius: 50%;
+            border-radius: 8px; /* rectangular */
             display: block;
             margin: 20px auto 30px auto;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
         }
 
         footer {
@@ -66,6 +77,7 @@
             color: #9ca3af;
             border-top: 1px solid #1e293b;
             padding-top: 20px;
+            text-align: center;
         }
     </style>
 </head>
@@ -105,8 +117,14 @@
 
         <h3>Virtualization & Linux Command Line</h3>
 
-        <img src="images/ubuntu-vm-terminal.png"
-             alt="Ubuntu virtual machine running in a command-line environment">
+        <figure>
+            <img src="images/ubuntu-vm-terminal.png"
+                 alt="Ubuntu virtual machine running in a command-line environment">
+            <figcaption>
+                Ubuntu virtual machine accessed through a remote university lab, used for Linux command-line navigation,
+                user and group management, and compiling C programs.
+            </figcaption>
+        </figure>
 
         <p>
             My exposure to virtualization began in a Computer Operating Systems course, where we were required to run a
@@ -127,8 +145,14 @@
 
         <h3>TrueNAS & Personal Storage Server</h3>
 
-        <img src="images/truenas-dashboard.png"
-             alt="TrueNAS web dashboard showing storage and system status">
+        <figure>
+            <img src="images/truenas-dashboard.png"
+                 alt="TrueNAS web dashboard showing storage and system status">
+            <figcaption>
+                TrueNAS dashboard showing active applications, storage management, and hosted services running on
+                repurposed laptop hardware.
+            </figcaption>
+        </figure>
 
         <p>
             To gain experience with storage and server administration, I repurposed an old laptop by installing TrueNAS
@@ -149,8 +173,13 @@
 
         <h3>Pi-hole & Network-Wide DNS Filtering</h3>
 
-        <img src="images/pihole-dashboard.png"
-             alt="Pi-hole dashboard showing blocked DNS queries">
+        <figure>
+            <img src="images/pihole-dashboard.png"
+                 alt="Pi-hole dashboard showing blocked DNS queries">
+            <figcaption>
+                Pi-hole DNS filtering dashboard displaying real-time query statistics and network-wide ad blocking.
+            </figcaption>
+        </figure>
 
         <p>
             To further explore networking concepts, I implemented Pi-hole as a network-wide DNS filtering solution.
@@ -166,7 +195,8 @@
 
         <p>
             Because these systems are actively used in my daily environment, homelabbing has been both practical and
-            fulfilling. It has resulted in tangible tools while significantly deepening my understanding of IT systems.
+            fulfilling. It has resulted in tangible tools while significantly deepening my understanding of operating
+            systems, networking, storage, and system administration.
         </p>
     </section>
 
@@ -174,7 +204,14 @@
 
     <p>
         I am currently seeking an <span class="highlight">entry-level IT or cybersecurity internship</span> where I can
-        continue to build hands-on experience and learn from professionals in the field.
+        continue to build hands-on experience, learn from professionals in the field, and contribute meaningfully to a team.
+        I am especially interested in roles involving systems administration, networking, security operations, or
+        infrastructure support.
+    </p>
+
+    <p>
+        This website serves as a living record of my projects, learning process, and technical growth.
+        Everything documented here reflects real systems I have built, configured, and fixed.
     </p>
 
     <footer>
